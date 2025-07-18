@@ -1,40 +1,43 @@
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50">
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">Turn Feedback Into Actionable Insights</h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Stop drowning in feedback. Get AI-powered analysis that tells you exactly what to build next.
+    <div className="min-h-screen bg-gradient-to-br from-[#1c2237] via-[#2c2f4a] to-[#1c2237] text-beige">
+      <div className="container mx-auto px-6 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold text-white leading-tight mb-6">
+            Turn Feedback Into <br /> Actionable Insights
+          </h1>
+          <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+            Stop drowning in feedback. Let AI tell you exactly what your users need next.
           </p>
-          <a href="/dashboard">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-blue-700">
-              Start Free Trial
+          <a href="/Dashboard">
+            <button className="bg-gradient-to-r from-[#3b82f6] to-[#6366f1] text-white px-10 py-4 rounded-2xl text-lg font-semibold shadow-lg hover:scale-105 transition-transform">
+              🚀 Start Free Trial
             </button>
           </a>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="text-center">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold mb-2">Collect Feedback</h3>
-              <p className="text-gray-600">Simple widget for your website or forward emails</p>
+        <div className="grid md:grid-cols-3 gap-10">
+          {[
+            {
+              title: "📥 Collect Feedback",
+              desc: "Use forms, widgets, or emails to gather customer insights effortlessly."
+            },
+            {
+              title: "🤖 AI Analysis",
+              desc: "Automatically cluster, prioritize, and summarize what users want."
+            },
+            {
+              title: "🚧 Build Smarter",
+              desc: "Know what features to build next, backed by real user pain points."
+            }
+          ].map((item, index) => (
+            <div key={index} className="bg-[#272c40] rounded-2xl p-6 shadow-xl text-center hover:scale-[1.02] transition-transform">
+              <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
+              <p className="text-gray-400">{item.desc}</p>
             </div>
-          </div>
-          <div className="text-center">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold mb-2">AI Analysis</h3>
-              <p className="text-gray-600">Automatically categorize and prioritize feedback</p>
-            </div>
-          </div>
-          <div className="text-center">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-semibold mb-2">Build Smart</h3>
-              <p className="text-gray-600">Know exactly what to build next</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
