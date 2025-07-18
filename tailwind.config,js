@@ -1,0 +1,22 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",   // App Router pages/components
+    "./components/**/*.{js,ts,jsx,tsx}", // Optional: custom components folder
+    "./pages/**/*.{js,ts,jsx,tsx}", // If you have a /pages directory too
+  ],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#2563eb', // blue-600
+          dark: '#1d4ed8',    // blue-700
+        },
+        accent: {
+          DEFAULT: '#a78bfa', // purple-400
+        },
+      },
+    },
+  },
+  plugins: [],
+}
