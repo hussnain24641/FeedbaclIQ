@@ -1,10 +1,11 @@
 export default function Landing() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1c2237] via-[#2c2f4a] to-[#1c2237] text-beige">
+    <div className="min-h-screen bg-gradient-to-br from-[#1C1C3A] via-[#2B2C55] to-[#0F172A] text-white">
       <div className="container mx-auto px-6 py-20">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-extrabold text-white leading-tight mb-6">
-            Turn Feedback Into <br /> Actionable Insights
+          <h1 className="text-5xl font-extrabold leading-tight mb-6">
+            Turn Feedback Into <br /> 
+            <span className="text-[#38BDF8]">Actionable Insights</span>
           </h1>
           <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
             Stop drowning in feedback. Let AI tell you exactly what your users need next.
@@ -31,7 +32,7 @@ export default function Landing() {
               desc: "Know what features to build next, backed by real user pain points."
             }
           ].map((item, index) => (
-            <div key={index} className="bg-[#272c40] rounded-2xl p-6 shadow-xl text-center hover:scale-[1.02] transition-transform">
+            <div key={index} className="bg-[#1F2544] rounded-2xl p-6 shadow-xl text-center hover:scale-[1.02] transition-transform">
               <h3 className="text-xl font-semibold text-white mb-3">{item.title}</h3>
               <p className="text-gray-400">{item.desc}</p>
             </div>
@@ -41,3 +42,4 @@ export default function Landing() {
     </div>
   );
 }
+
